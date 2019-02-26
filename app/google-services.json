@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "2137375805",
+    "firebase_url": "https://black-spot-a9d9f.firebaseio.com",
+    "project_id": "black-spot-a9d9f",
+    "storage_bucket": "black-spot-a9d9f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2137375805:android:669799cc84340214",
+        "android_client_info": {
+          "package_name": "com.example.kd.blackspot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2137375805-oger1bca00egm72l7rsmfvrepva7kqqn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kd.blackspot",
+            "certificate_hash": "76c88127e370ebfa289b3be9615b77ab9a1c5cdf"
+          }
+        },
+        {
+          "client_id": "2137375805-s7ijdqk0fr0gnkospplojfmbqpt0rgoq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlMnI6tH9CVkz5pQPkm1N7A9ruFSRKPWs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "2137375805-s7ijdqk0fr0gnkospplojfmbqpt0rgoq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
