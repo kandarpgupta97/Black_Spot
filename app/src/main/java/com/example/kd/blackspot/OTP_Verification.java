@@ -5,7 +5,6 @@ import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -22,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 
 public class OTP_Verification extends AppCompatActivity {
 
-    String phone_number, verificationId;
+    String phone_number, verificationId, TAG = "Tag";
     private EditText editText;
     private FirebaseAuth mAuth;
     @Override
@@ -64,8 +63,9 @@ public class OTP_Verification extends AppCompatActivity {
 
                 if(task.isSuccessful())
                 {
-                    Toast.makeText(getApplicationContext(), "You Are Successful", Toast.LENGTH_SHORT).show();
-
+                    Toast.makeText(getApplicationContext(), "Welcome", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(OTP_Verification.this, MainActivity.class));
+                    finish();
                 }
                 else
                 {
@@ -89,13 +89,11 @@ public class OTP_Verification extends AppCompatActivity {
         @Override
         public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
             super.onCodeSent(s, forceResendingToken);
-
             verificationId = s;
         }
 
         @Override
         public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
-
             String code = phoneAuthCredential.getSmsCode();
             if(code != null)
             {

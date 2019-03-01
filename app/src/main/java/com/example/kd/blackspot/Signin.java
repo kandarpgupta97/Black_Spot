@@ -22,7 +22,8 @@ public class Signin extends AppCompatActivity {
                 String num = p_number.getText().toString().trim();
                 if(num.isEmpty() || num.length()<10)
                 {
-                    Toast.makeText(getApplicationContext(), "Incorrect", Toast.LENGTH_SHORT).show();
+                    p_number.setError("Enter a valid mobile number");
+                    p_number.requestFocus();
                     return;
                 }
 
