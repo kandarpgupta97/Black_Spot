@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Black Spot</string>
+    <string name="navigation">Navigation</string>
+    <string name="add_spot">Add Spot</string>
 </resources>

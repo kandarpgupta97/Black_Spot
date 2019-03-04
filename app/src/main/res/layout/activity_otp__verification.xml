@@ -6,9 +6,13 @@
 
     <EditText
         android:id="@+id/otp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="20dp"
         android:hint="Enter OTP"
+        android:gravity="center_horizontal"
+        android:background="@drawable/rectangle"
         android:layout_centerInParent="true"/>
 
     <Button
@@ -17,5 +21,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/otp"
         android:layout_centerInParent="true"
+        android:background="@drawable/rounded_corner_button"
         android:text="sign in"/>
 </RelativeLayout>
