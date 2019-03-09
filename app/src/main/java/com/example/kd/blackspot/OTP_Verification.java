@@ -63,7 +63,7 @@ public class OTP_Verification extends AppCompatActivity {
                 if(task.isSuccessful())
                 {
                     Toast.makeText(getApplicationContext(), "Welcome", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(OTP_Verification.this, MainActivity.class));
+                    startActivity(new Intent(OTP_Verification.this, ProfileActivity.class));
                     finish();
                 }
                 else

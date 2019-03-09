@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Signin extends AppCompatActivity {
 
     EditText p_number;
@@ -14,6 +16,13 @@ public class Signin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
+
+        if(FirebaseAuth.getInstance().getCurrentUser()!= null)
+        {
+            startActivity(new Intent(Signin.this, MainActivity.class));
+            finish();
+        }
+
 
         p_number= findViewById(R.id.phone_number);
         findViewById(R.id.done).setOnClickListener(new View.OnClickListener() {
@@ -28,8 +37,9 @@ public class Signin extends AppCompatActivity {
                 }
 
                 Intent intent = new Intent(Signin.this, OTP_Verification.class);
-                intent.putExtra("number", num);
+                intent.putExtra("number","+91" + num);
                 startActivity(intent);
+                finish();
             }
         });
     }

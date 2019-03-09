@@ -2,7 +2,15 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/back"
+        android:scaleType="fitXY"
+        android:alpha="0.5"/>
 
     <EditText
         android:id="@+id/otp"
@@ -12,6 +20,8 @@
         android:layout_margin="20dp"
         android:hint="Enter OTP"
         android:gravity="center_horizontal"
+        android:textColorHint="#aaaaaa"
+        android:textColor="#fff"
         android:background="@drawable/rectangle"
         android:layout_centerInParent="true"/>
 
@@ -20,7 +30,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/otp"
+        android:textColor="#fff"
         android:layout_centerInParent="true"
-        android:background="@drawable/rounded_corner_button"
+        android:background="@null"
+        android:layout_marginTop="30dp"
         android:text="sign in"/>
 </RelativeLayout>
