@@ -1,5 +1,6 @@
 package com.example.kd.blackspot;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +19,6 @@ public class ProfileActivity extends AppCompatActivity {
         findViewById(R.id.create_account).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
             }
         });
     }

@@ -17,6 +17,9 @@ public class Signin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
 
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+
         if(FirebaseAuth.getInstance().getCurrentUser()!= null)
         {
             startActivity(new Intent(Signin.this, MainActivity.class));
