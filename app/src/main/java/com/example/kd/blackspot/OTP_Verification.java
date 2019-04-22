@@ -4,10 +4,10 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -49,8 +49,8 @@ public class OTP_Verification extends AppCompatActivity {
         });
     }
 
-    private void verifyCode(String code)
-    {
+    private void verifyCode(String code) {
+        Log.d(TAG, "verifyCode: " + code);
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, code);
         signInWithCredentials(credential);
     }
@@ -87,6 +87,7 @@ public class OTP_Verification extends AppCompatActivity {
 
         @Override
         public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+            Log.d(TAG, "onCodeSent: " + s);
             super.onCodeSent(s, forceResendingToken);
             verificationId = s;
         }
@@ -94,6 +95,7 @@ public class OTP_Verification extends AppCompatActivity {
         @Override
         public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
             String code = phoneAuthCredential.getSmsCode();
+            Log.d(TAG, "onVerificationCompleted: " + code);
             if(code != null)
             {
                 verifyCode(code);
@@ -102,6 +104,7 @@ public class OTP_Verification extends AppCompatActivity {
 
         @Override
         public void onVerificationFailed(FirebaseException e) {
+            Log.d(TAG, "onVerificationFailed: "+e);
             Toast.makeText(getApplicationContext(), "Exception is :" + e, Toast.LENGTH_SHORT).show();
         }
     };
